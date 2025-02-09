@@ -62,7 +62,7 @@ def moeda_preco(moeda, moeda_corrente):
 
 def informacao_moeda(moeda, moeda_corrente):
     API_ENDPOINT = r'simple/price?'
-    filters = f'ids={moeda}&vs_currencies={moeda_corrente}&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true&include_last_updated_at=true'  #Se quiser buscar pelo ID botar ids no lugar de symbols
+    filters = f'ids={moeda}&vs_currencies={moeda_corrente}&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true&include_last_updated_at=true'  
 
     url = f"{config()['url_api']}" + API_ENDPOINT + filters
 
