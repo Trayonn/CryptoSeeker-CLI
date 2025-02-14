@@ -67,7 +67,7 @@ def informacoes_adicionais(moeda, moeda_corrente):
         print("Market Cap não encontrado.")
 
     if moeda in data and include_24hr_vol in data[moeda]: 
-        print(f"Volume de transações na último hora da cripto {moeda}: {data[moeda][include_24hr_vol]}")
+        print(f"Volume de transações na última hora da cripto {moeda}: {data[moeda][include_24hr_vol]}")
     else:
         print("Volume de transações não encontrado.")
  
