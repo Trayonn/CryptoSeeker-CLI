@@ -61,7 +61,7 @@ def informacoes_adicionais(moeda, moeda_corrente):
     include_24hr_change = f"{moeda_corrente}_24h_change"
 
 
-    if moeda in data and include_market_cap in data[moeda]: 
+    if moeda in data and include_market_cap in data[moeda]:  
         valor_market_cap = data[moeda][include_market_cap]
         print(f"Valor de mercado da cripto {moeda} em {moeda_corrente.upper()}:  {format(valor_market_cap, '.2f')}")
     else:
