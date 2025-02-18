@@ -13,5 +13,14 @@ CryptoSeeker é uma ferramenta de linha de comando (CLI) para consulta de preço
 - Conversão de criptomoedas para outras criptos ou moedas fiduciárias
 
 
+# Imagens
 
+## Menu principal
+![Screenshot_10](https://github.com/user-attachments/assets/1052c09b-b8f8-4765-9dc7-0e28278c3686)
+
+## Informações sobre a criptomoeda escolhida
+![Screenshot_16](https://github.com/user-attachments/assets/7717aba8-a499-485e-bf3f-909704038e47)
+
+## Conversão entre criptos
+![Screenshot_18](https://github.com/user-attachments/assets/412f0ddf-7aa4-4315-a8dc-2047f4191d6f)
 
