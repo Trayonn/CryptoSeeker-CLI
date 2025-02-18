@@ -62,17 +62,20 @@ def informacoes_adicionais(moeda, moeda_corrente):
 
 
     if moeda in data and include_market_cap in data[moeda]: 
-        print(f"Valor de mercado da cripto {moeda} em {moeda_corrente.upper()}: {data[moeda][include_market_cap]}")
+        valor_market_cap = data[moeda][include_market_cap]
+        print(f"Valor de mercado da cripto {moeda} em {moeda_corrente.upper()}:  {format(valor_market_cap, '.2f')}")
     else:
         print("Market Cap não encontrado.")
 
     if moeda in data and include_24hr_vol in data[moeda]: 
-        print(f"Volume de transações na último hora da cripto {moeda}: {data[moeda][include_24hr_vol]}")
+        volume_24hr = data[moeda][include_24hr_vol]
+        print(f"Volume de transações na última hora da cripto {moeda}: {format(volume_24hr, '.2f')}")
     else:
         print("Volume de transações não encontrado.")
  
     if moeda in data and include_24hr_change in data[moeda]: 
-        print(f"Alteração de valor da cripto {moeda} nas ultimas 24 horas: {data[moeda][include_24hr_change]}")
+        alteracao_24hr = data[moeda][include_24hr_change]
+        print(f"Alteração de valor da cripto {moeda} nas ultimas 24 horas: {format(alteracao_24hr, '.2f')}")
     else:
         print("Alteração de valor não encontrada.")
 
@@ -93,7 +96,7 @@ def conversor_moeda():
 
         conversao = (quantidade_moeda * valor_cripto_original) / valor_cripto_comparada
 
-        print(f"{quantidade_moeda} {moeda} equivalem a {conversao} {cripto_comparada}.")
+        print(f"{quantidade_moeda} {moeda} equivalem a {format(conversao, '.2f')} {cripto_comparada}.")
 
 
     elif conversao == '2':
@@ -103,7 +106,7 @@ def conversor_moeda():
 
         valor_convertido = valor_cripto_original * quantidade_moeda
 
-        print(f"Os {quantidade_moeda} {moeda} convertidos equivalem a {valor_convertido} em {moeda_comparada}")
+        print(f"Os {quantidade_moeda} {moeda} convertidos equivalem a {format(valor_convertido, '.2f')} em {moeda_comparada}")
 
 
     else:
@@ -125,7 +128,6 @@ def main_2():
 
     console.print(panel)
 
-    print("Carregando dados das moedas...")
     ids_moeda = obter_ids_moedas()
 
     opcoes = {
@@ -137,7 +139,7 @@ def main_2():
     while True:
         escolha = input("\nEscolha uma opção: \n"
                         "1- Buscar uma criptomoeda pelo ID\n"
-                        "2- Ver lista de IDs criptomoedas\n"
+                        "2- Ver lista de IDs de criptomoedas\n"
                         "3- Conversor de Moedas\n"
                         "0- Sair\n"
                         "Digite sua escolha: ")
